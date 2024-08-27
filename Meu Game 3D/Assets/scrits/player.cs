@@ -6,6 +6,7 @@ using Vector3 = UnityEngine.Vector3;
 public class player : MonoBehaviour
 {
     public int velocidade = 10;
+    public int forcaPula = 7;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -26,4 +27,4 @@ public class player : MonoBehaviour
         }
 
 }
-    }
+    }    
