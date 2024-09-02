@@ -7,6 +7,8 @@ public class player : MonoBehaviour
 {
     public int velocidade = 10;
     public int forcaPula = 7;
+    public bool noChão;
+    
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,15 @@ public class player : MonoBehaviour
         float v = Input.GetAxis("Vertical");
         Vector3 direcao = new Vector3(h, 0, v);
         rb.AddForce(direcao * velocidade * Time.deltaTime, ForceMode.Impulse);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * forcaPula, ForceMode.Impulse);
+        }
+        
+        
+        
+        
         if (transform.position.y < -5)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
