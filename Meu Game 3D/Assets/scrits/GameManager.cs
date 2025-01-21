@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public void SubtrairMoedas(int valor)
     {
         restantes -= valor;
-        hud.text = $"Moedas restantes:{restantes}";
+
         if (restantes <= 0)
         {
             //ganhou o jogo 
